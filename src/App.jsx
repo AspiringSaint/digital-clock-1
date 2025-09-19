@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import './App.css'
 
 const App = () => {
 
@@ -15,7 +16,8 @@ const App = () => {
   const formattedTime = time.toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit'
+    second: '2-digit',
+    hour12: !is24Hour
   })
 
   const formattedDate = time.toLocaleDateString([], {
